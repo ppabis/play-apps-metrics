@@ -14,7 +14,7 @@ class ErrorCountsQuery:
     self.endTime = freshness["DAILY"]["latestEndTime"]
     # Construct date for the previous day
     self.lastDay = datetime(self.endTime['year'], self.endTime['month'], self.endTime['day'], self.endTime['hours'])
-    self.prevDay = self.lastDay - timedelta(days=3)
+    self.prevDay = self.lastDay - timedelta(days=days)
     del self.endTime['hours']
 
   def get_body(self, metrics, dimensions):

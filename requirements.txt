@@ -1,0 +1,5 @@
+google-api-python-client
+oauth2client
+prometheus-client
+google-cloud-storage
+pandas

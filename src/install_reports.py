@@ -2,10 +2,10 @@ from io import StringIO
 from datetime import datetime, timedelta
 from google.cloud import storage
 import pandas
-from config import KEY
+from src.config import KEY
 
 class InstallReports:
-  def __init__(self, uri, delay_days):    
+  def __init__(self, uri, delay_days):
     self.month = (datetime.now() - timedelta(days=delay_days)).strftime("%Y%m")
     bucket = uri.split("/")[2]
     storageClient = storage.Client.from_service_account_json(KEY)
