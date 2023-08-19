@@ -13,6 +13,8 @@ class ErrorCountsQuery:
     freshness = {f['aggregationPeriod']: f for f in freshness}
     self.endTime = freshness["DAILY"]["latestEndTime"]
     # Construct date for the previous day
+    if 'hours' not in self.endTime:
+      self.endTime['hours'] = 0
     self.lastDay = datetime(self.endTime['year'], self.endTime['month'], self.endTime['day'], self.endTime['hours'])
     self.prevDay = self.lastDay - timedelta(days=days)
     del self.endTime['hours']
