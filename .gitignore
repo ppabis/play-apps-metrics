@@ -1,3 +1,4 @@
 pc-api*.json
 *copy.py
 __pycache__
+*key.json

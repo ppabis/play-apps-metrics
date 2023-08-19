@@ -1,0 +1,8 @@
+scrape_configs:
+  - job_name: playmetrics
+    scrape_interval: 1m
+    metrics_path: /
+    static_configs:
+      - targets:
+          - playmetrics:9300
+    enable_http2: false
