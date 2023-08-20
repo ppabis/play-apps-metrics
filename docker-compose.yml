@@ -38,6 +38,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 9300:9300
+    restart: always
     volumes:
       - ./mykey.json:/app/mykey.json
     networks:
